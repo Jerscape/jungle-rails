@@ -1,7 +1,9 @@
 class OrdersController < ApplicationController
 
   def show
-    @order = Order.find(params[:id])
+    # @order = Order.find(params[:id])
+    @order = Order.includes(:line_items).find(params[:id])
+    @enhanced_cart = enhanced_cart 
   end
 
   def create
