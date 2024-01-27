@@ -12,6 +12,11 @@ Rails.application.routes.draw do
 
   resources :orders, only: [:create, :show]
 
+  #larry AI suggested this but with about#index. That still wasn' tworking so I switched it to about@show
+  #I had initially tried using resoruces, and then resource 
+  get '/about', to: 'about#show'
+
+
   namespace :admin do
     root to: 'dashboard#show'
     resources :products, except: [:edit, :update, :show]
