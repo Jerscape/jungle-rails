@@ -10,6 +10,8 @@ Rails.application.routes.draw do
     post   :remove_item
   end
 
+  
+
   resources :orders, only: [:create, :show]
 
   #larry AI suggested this but with about#index. That still wasn' tworking so I switched it to about@show
