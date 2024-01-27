@@ -1,2 +1,17 @@
 <h1>Admin::Dashboard#show</h1>
 <p>Find me in app/views/admin/dashboard/show.html.erb</p>
+
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Total Products</th>
+        <th>Total Categories</th>
+      </tr>
+  </thead>
+
+  <tbody>
+    
+    <td> <%= @total_products %> </td>
+    <td> <%= @total_categories %> </td>
+  </tbody>
+</table>
