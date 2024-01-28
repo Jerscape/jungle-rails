@@ -42,9 +42,24 @@
 
             <li class="nav-item">
               <%= link_to 'About', '/about', class: 'nav-link' %>
-             
             </li>
+
+            <!-- #Register -->
+            <li class="nav-item">
+              <%= link_to 'Register', '/signup', class: 'nav-link' %>
+            </li>
+            <!-- #conditionaly render login/vs logout depending on current_user value -->
             
+            <% if current_user %>
+              <li class="nav-item">
+              <%= link_to 'Logout', '/logout', class: 'nav-link' %>
+              </li>
+            <% else %>
+              <li class="nav-item">
+              <%= link_to 'Login', '/login', class: 'nav-link' %>
+              </li>
+            <% end %>
+
           <%# </ul>
         </li> %>
       </ul>
