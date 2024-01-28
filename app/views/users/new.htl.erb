@@ -1,0 +1,12 @@
+<h1>Sign up!</h1>
+
+<%= form_for :user, url: '/users' do |f| %>
+
+  Name: <%= f.text_field :name %>
+  Email: <%= f.text_field :email %>
+  <!-- Compass said to make all three fields texdt fields, the guid they gave us on secure auth used password_field-->
+  Password: <%= f.password_field :password %>
+  Password Confirmation: <%= f.password_field :password_confirmation %>
+  <% f.submit "Submit" %> 
+
+<% end %>
